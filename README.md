@@ -109,3 +109,9 @@ Deploy your blog to any static hosting platform
 - Prototype   - [Fuwari](https://github.com/saicaca/fuwari)
 - Inspiration - [Yukina](https://github.com/WhitePaper233/yukina) & [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
 - Translation - [translate](https://gitee.com/mail_osc/translate)
+
+
+## Source
+This project is modified from [Spr_Aachen's Twilight](https://github.com/Spr-Aachen/Twilight). Thanks to the original author for the open source contribution.
+The original copyright and license information are retained. 
+The configuration and ongoing maintenance of this repository are handled by [jduoluo].
