@@ -112,6 +112,6 @@ Deploy your blog to any static hosting platform
 
 
 ## Source
-This project is modified from [Spr_Aachen's Twilight](https://github.com/Spr-Aachen/Twilight). Thanks to the original author for the open source contribution.
-The original copyright and license information are retained. 
-The configuration and ongoing maintenance of this repository are handled by [jduoluo].
+This project is modified from [Spr_Aachen's Twilight](https://github.com/Spr-Aachen/Twilight). Thanks to the original author for the open source contribution.  
+The original copyright and license information are retained.  
+The configuration and ongoing maintenance of this repository are handled by [jduoluo](https://github.com/jduoluo/DuoluoBlog).  
