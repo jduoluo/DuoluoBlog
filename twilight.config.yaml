@@ -419,7 +419,7 @@ musicPlayer:
                 # 作者
                 artist: "efs"
                 # 封面
-                cover: ""
+                cover: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.jpg"
                 # 音乐路径
                 url: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.flac"
                 # 歌词路径
