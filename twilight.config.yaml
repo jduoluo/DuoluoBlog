@@ -174,12 +174,12 @@ navbar:
     # 链接配置 (链接预设位于 src/constants/link-presets.ts 的 LinkPresets)
     links:
         - # 一级导航链接 - 主页Home (预设)
-            "主页"
+            "Home"
         - # 一级导航链接 - 归档Archive (预设)
-            "归档"
+            "Archive"
         - # 一级导航链接 - 展览Exhibition (自定义)
             # 导航名称
-            name: "展览"
+            name: "Exhibition"
             # 导航链接
             url: "/exhibition/"
             # 导航图标
@@ -189,21 +189,21 @@ navbar:
             # 子链接
             children:
                 - # 二级导航链接 - 项目Projects (预设)
-                    "项目"
+                    "Projects"
                 - # 二级导航链接 - 技能Skills (预设)
-                    "技能"
+                    "Skills"
                 - # 二级导航链接 - 历程Timeline (预设)
-                    "历程"
+                    "Timeline"
                 - # 二级导航链接 - 日记Diary (预设)
-                    "日记"
+                    "Diary"
                 - # 二级导航链接 - 相册Albums (预设)
-                    "相册"
+                    "Albums"
                 - # 二级导航链接 - 动画Anime (预设)
-                    "动画"
+                    "Anime"
         - # 一级导航链接 - 好友Friends (预设)
-            "好友"
+            "Friends"
         - # 一级导航链接 - 关于About (预设)
-            "关于"
+            "About"
 
 # 侧边栏配置
 sidebar:
