@@ -5,9 +5,9 @@ site:
     # 站点标题
     title: "多落孑的小屋"
     # 站点副标题
-    subtitle: "名为博客的藏身处"
+    subtitle: "网络一角的藏身处"
     # 语言配置
-    lang: "zh-CN"
+    lang: "zh"
     # 翻译配置
     translate:
         # 启用翻译功能
@@ -72,7 +72,7 @@ site:
             # 为多张图片启用轮播，否则随机显示一张图片
             enable: true
             # 轮播间隔时间 (秒)
-            interval: 3.6
+            interval: 5
             # 启用 Ken Burns 效果
             kenBurns: true
         # Banner 模式专属配置
@@ -85,7 +85,7 @@ site:
                 title: "多落孑的小屋"
                 # 副标题，支持单个字符串或字符串数组
                 subtitle:
-                    - "名为博客的藏身处"
+                    - "网络一角的藏身处"
                 # 副标题打字机效果
                 typewriter:
                     # 启用副标题打字机效果
@@ -284,7 +284,7 @@ profile:
     # 头像配置 (相对于 /public 目录)
     avatar: "/assets/images/avatar.jpg"
     # 信息配置
-    name: "Twilight"
+    name: "多落孑"
     # 简介配置
     bio: "Hi"
     # 链接配置
@@ -295,14 +295,14 @@ profile:
             # 图标
             icon: "fa6-brands:github"
             # 链接
-            url: "https://github.com/Spr-Aachen/Twilight"
+            url: "https://github.com/jduoluo"
 
 # 公告配置
 announcement:
     # 公告标题
-    title: "Announcement"
+    title: "公告"
     # 公告内容
-    content: "Welcome to my blog!"
+    content: "欢迎来到我的小屋！这是一个记录和分享的地方，希望你能喜欢这里的内容。"
     # 允许用户关闭公告
     closable: true
     # 链接配置
@@ -406,7 +406,7 @@ musicPlayer:
         # 类型 ("playlist" 歌单 | "song" 单曲)
         type: "playlist"
         # 资源 ID
-        id: "2161912966"
+        id: "7708993289"
     # local 模式专属配置
     local:
         # 播放列表
@@ -415,17 +415,17 @@ musicPlayer:
                 # 序号
                 id: 1
                 # 标题
-                title: "深海之息"
+                title: "ブクレシュティの人形师"
                 # 作者
-                artist: "Youzee Music"
+                artist: "efs"
                 # 封面
-                cover: "https://p1.music.126.net/PhKOqFtljgHDDpKYM2ADUA==/109951169858309716.jpg"
+                cover: ""
                 # 音乐路径
-                url: "assets/music/深海之息.m4a"
+                url: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.flac"
                 # 歌词路径
-                lrc: "assets/music/深海之息.lrc"
+                lrc: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.lrc"
                 # 时长
-                duration: 146
+                duration: 358
     # 是否自动播放
     autoplay: true
 
