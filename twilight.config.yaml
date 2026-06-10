@@ -413,19 +413,19 @@ musicPlayer:
         playlist:
             - # 列表示例
                 # 序号
-                id: 1
+                #id: 1
                 # 标题
-                title: "ブクレシュティの人形师"
+                #title: ""
                 # 作者
-                artist: "efs"
+                #artist: ""
                 # 封面
-                cover: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.jpg"
+                #cover: ""
                 # 音乐路径
-                url: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.flac"
+                #url: ""
                 # 歌词路径
-                lrc: "assets/music/ブクレシュティの人形师 【Retro Atmosphere】 - efs.lrc"
+                #lrc: ""
                 # 时长
-                duration: 358
+                #duration: 1
     # 是否自动播放
     autoplay: true
 
