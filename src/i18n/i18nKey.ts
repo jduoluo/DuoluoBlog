@@ -7,6 +7,9 @@ enum I18nKey {
     archive = "archive",
     about = "about",
     search = "search",
+    // 导航描述（用于 link preset 的 description）
+    homeDescription = "homeDescription",
+    archiveDescription = "archiveDescription",
 
     // 文章
     directory = "directory",
@@ -188,6 +191,7 @@ enum I18nKey {
 
     // 友链页面
     friends = "friends",
+    friendsSubtitle = "friendsSubtitle",
 
     // RSS页面
     rss = "rss",

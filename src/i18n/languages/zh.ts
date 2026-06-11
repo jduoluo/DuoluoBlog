@@ -11,6 +11,8 @@ export const zh: Translation = {
     [Key.archive]: "归档",
     [Key.about]: "关于",
     [Key.search]: "搜索",
+    [Key.homeDescription]: "Twilight - 简洁、清爽、美观的博客主题",
+    [Key.archiveDescription]: "按时间顺序排列的所有已发布文章。",
 
     // 文章
     [Key.directory]: "目录",
@@ -191,6 +193,7 @@ export const zh: Translation = {
 
     // 友链页面
     [Key.friends]: "友链",
+    [Key.friendsSubtitle]: "精选友链列表",
 
     // RSS页面
     [Key.rss]: "RSS 订阅",

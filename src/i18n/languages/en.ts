@@ -11,6 +11,8 @@ export const en: Translation = {
     [Key.archive]: "Archive",
     [Key.about]: "About",
     [Key.search]: "Search",
+    [Key.homeDescription]: "Twilight - A simple, clean, and beautiful blog theme.",
+    [Key.archiveDescription]: "A chronological list of all published posts.",
 
     // Posts
     [Key.directory]: "Directory",
@@ -191,6 +193,7 @@ export const en: Translation = {
 
     // Friends Page
     [Key.friends]: "Friends",
+    [Key.friendsSubtitle]: "A curated list of friend sites.",
 
     // RSS Page
     [Key.rss]: "RSS Feed",
