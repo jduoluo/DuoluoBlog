@@ -1,117 +1,62 @@
-<div align = "center">
+# Twilight（本仓库说明）
 
-# Twilight
+本仓库基于开源项目 [Spr_Aachen/Twilight](https://github.com/Spr-Aachen/Twilight) 进行修改与本地化处理。原作者版权与许可信息保留在 LICENSE 文件中。
 
-A CMS integrated static blog template built with Astro framework.
+下文为本仓库的变更说明、开发者脚本及使用方法。原模板文档与功能介绍保留在 `docs/` 中，需完整参考原文档请见上游链接。
 
-[**🖥️ Live Demo**](https://twilight.spr-aachen.com)
-[**📝 Documentation**](https://docs.twilight.spr-aachen.com/en)
+## 本仓库改动摘要
+- 侧边栏目录项本地化：支持把 `src/content/posts` 下的文件夹 slug（如 `essays`/`novels`/`poetry`）映射为中文显示。
+- 本地化映射文件：新增 `src/i18n/folders/zh.json` 与 `src/i18n/folders/en.json`，用于存放 slug -> 显示名 映射。
+- 映射工具：新增 `src/i18n/folder-map.ts`，统一按站点语言读取映射并返回显示名。
+- 目录生成更新：`src/utils/directory.ts` 已改为使用 `getFolderDisplayName`，仅修改显示文本，不改文章路由。
+- 自动化脚本：新增 `scripts/generate-folder-mapping.cjs`，用于扫描 `src/content/posts` 并补全映射占位（生成后需手动在 `src/i18n/folders/*.json` 填写翻译）。
 
-[![Bilibili](https://img.shields.io/badge/Bilibili-Intro-blue?logo=Bilibili)](https://space.bilibili.com/359461611/lists/6641229)&nbsp;
-[![YouTube](https://img.shields.io/badge/YouTube-Intro-red?logo=YouTube)](https://youtube.com/playlist?list=PLzjq8Hx1SRV7yqZQiACcCJmKPeg5D8JKe&si=Bcz2o0PF8MFvx8ec)
+## 快速使用说明（开发者）
 
-<table style="width: 100%; table-layout: fixed;">
-   <tr>
-      <td colspan="5"><img alt="Desktop" src="docs/image/Desktop.jpg" style="max-width: 100%;"></td>
-   </tr>
-   <tr>
-      <td><img alt="Mobile_4" src="docs/image/Mobile_4.jpg" style="max-width: 100%;"></td>
-      <td><img alt="Mobile_2" src="docs/image/Mobile_2.jpg" style="max-width: 100%;"></td>
-      <td><img alt="Mobile_1" src="docs/image/Mobile_1.jpg" style="max-width: 100%;"></td>
-      <td><img alt="Mobile_3" src="docs/image/Mobile_3.jpg" style="max-width: 100%;"></td>
-      <td><img alt="Mobile_5" src="docs/image/Mobile_5.jpg" style="max-width: 100%;"></td>
-   </tr>
-</table>
+- 启动开发服务器：
+```bash
+pnpm install
+pnpm dev
+```
 
-</div>
+- 生成/补全映射占位（可直接运行脚本）：
+```bash
+node scripts/generate-folder-mapping.cjs
+```
+该脚本会把在 `src/content/posts` 中发现但尚未在 `src/i18n/folders/*.json` 中定义的 slug 写入为占位（值等于 key），并在运行结束提示需要翻译的条目。
 
----
+- 可选：在 `package.json` 中添加 npm 脚本以便记忆与 CI 使用，示例：
+```json
+"scripts": {
+  "gen-folder-map": "node scripts/generate-folder-mapping.cjs"
+}
+```
+然后可通过 `pnpm run gen-folder-map`（或 `npm run gen-folder-map`）运行。
 
-<div align = "center">
+## 编辑本地化显示名
 
-English | [**中文**](docs/README_ZH.md)
+生成脚本会写入占位后，手动编辑以下文件以填写最终翻译：
 
-</div>
+- `src/i18n/folders/zh.json`（中文）
+- `src/i18n/folders/en.json`（英文）
 
+示例（`src/i18n/folders/zh.json`）：
+```json
+{
+  "essays": "随笔",
+  "novels": "小说",
+  "poetry": "诗歌"
+}
+```
 
-## ✨ Features
+修改完毕后重新构建或刷新开发服务器页面即可看到侧边栏显示更新（仅影响显示文本，链接仍指向原始路由）。
 
-### Content
-- **CMS Functionality**: Easy content management with headless CMS integration
-- **Data Visualization**: Visualized personal data like projects, skills etc.
-- **Automatic Navigation**: Automatic generation of post navigation
+## 文档与原始说明
 
-### Components
-- **Analytics Support**: Umami analytics integration for visitor insights
-- **Comment System**: Twikoo-powered comment functionality
-- **Music Player**: Background music support with playlist management
-- **PIO Widget**: Interactive live2d character support
+原项目的完整使用说明与功能介绍保留在 `docs/` 中，或访问上游文档： https://docs.twilight.spr-aachen.com/en 。
 
-### VFX
-- **Smooth Transition Animations**: Polished page component transition animations
-- **Customizable Theme Colors**: Realtime customizable color schemes
-- **Dynamic Wallpaper System**: Carousel support with multiple display modes
-- **Immersive Particle Effects**: Highly customizable animated particles
+## 许可证与致谢
 
-### Compability
-- **Modern & Responsive Design**: Fully optimized for desktop and mobile devices
-- **Multilingual Capability**: Built-in translation functionality for global accessibility
+本仓库保留原项目的 LICENSE 与致谢信息。对于在本仓库中新增的脚本与文档（如 `scripts/generate-folder-mapping.cjs` 与 `src/i18n/folders/*`），同样遵循本仓库的开源许可约定。
 
-
-## 💻 Configuration
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Spr-Aachen/Twilight.git
-   # Navigate to the project directory
-   cd Twilight
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   # Install pnpm if not already installed
-   npm install -g pnpm
-   # Install project dependencies
-   pnpm install
-   ```
-
-3. **Configure your blog:**
-   - [Customize blog settings](https://docs.twilight.spr-aachen.com/en/config/core) inside `twilight.config.yaml`
-   - [Manage site content](https://docs.twilight.spr-aachen.com/en/config/content) inside `src/content`
-
-4. **Start the development server:**
-   ```bash
-   pnpm dev
-   ```
-
-
-## 🚀 Deployment
-
-Deploy your blog to any static hosting platform
-
-
-## ⚡ Commands
-
-| Command                     | Action                        |
-|:----------------------------|:------------------------------|
-| ~~`pnpm lint`~~             | ~~Check and fix code issues~~ |
-| ~~`pnpm format`~~           | ~~Format code with Biome~~    |
-| `pnpm check`                | Run Astro error checking      |
-| `pnpm dev`                  | Start local dev server        |
-| `pnpm build`                | Build site to `./dist/`       |
-| `pnpm preview`              | Preview build locally         |
-| `pnpm astro ...`            | Run Astro CLI commands        |
-| `pnpm new-post <filename>`  | Create a new blog post        |
-
-
-## 🙏 Acknowledgements
-
-- Prototype   - [Fuwari](https://github.com/saicaca/fuwari)
-- Inspiration - [Yukina](https://github.com/WhitePaper233/yukina) & [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)
-- Translation - [translate](https://gitee.com/mail_osc/translate)
-
-
-## Source
-This project is modified from [Spr_Aachen's Twilight](https://github.com/Spr-Aachen/Twilight). Thanks to the original author for the open source contribution.  
-The original copyright and license information are retained.  
-The configuration and ongoing maintenance of this repository are handled by [jduoluo](https://github.com/jduoluo/DuoluoBlog).  
+如需我将原 README 的重要部分（如功能列表、快速开始）迁移到本 README 中的其他位置，请告诉我要保留哪些段落。

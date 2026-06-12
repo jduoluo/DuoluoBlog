@@ -6,6 +6,7 @@ import { skillsData } from "./skills";
 import { timelineData } from "./timeline";
 import { i18n } from "../i18n/translation";
 import I18nKey from "../i18n/i18nKey";
+import { getFolderDisplayName } from "@i18n/folder-map";
 
 
 export interface DirectoryNode {
@@ -43,7 +44,8 @@ export async function getDirectoryTree(): Promise<DirectoryNode[]> {
         if (post.data.draft) continue;
         const parts = post.id.split('/');
         const fileName = parts.pop()!;
-        const paths = [rootMap.posts, ...parts];
+        const displayParts = parts.map((p) => getFolderDisplayName(p));
+        const paths = [rootMap.posts, ...displayParts];
         addNode(paths, post.data.title || fileName, `/posts/${post.id}/`);
     }
 

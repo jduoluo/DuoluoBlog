@@ -198,6 +198,17 @@ navbar:
                     url: "/novels/"
                     icon: "mdi:book"
                     description: "短篇与长篇小说合集"
+                - # 二级导航链接 - 随笔（自定义）
+                    name: "随笔"
+                    url: "/essays/"
+                    icon: "mdi:notebook"
+                    description: "随想与感悟"
+                #- # 二级导航链接 - 项目Projects (预设)
+                    #"Projects"
+                #- # 二级导航链接 - 技能Skills (预设)
+                    #"Skills"
+                #- # 二级导航链接 - 日记Diary (预设)
+                    #"Diary"
                 - # 二级导航链接 - 历程Timeline (预设)
                     "Timeline"
                 - # 二级导航链接 - 相册Albums (预设)
