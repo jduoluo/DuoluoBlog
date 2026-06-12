@@ -28,13 +28,17 @@ jobs:
         # env:
           # PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2' # 对变量值使用单引号。（可选）
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
+  #
+  # 上面是已注释的 GitHub Pages 部署 job。如果你确认只使用 Cloudflare 部署，
+  # 可以保持注释以避免每次触发时出现 deploy 失败的错误。
+  # 若将来需要恢复，移除每行前的 `# ` 即可重新启用。
