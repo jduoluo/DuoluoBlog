@@ -188,6 +188,16 @@ navbar:
             description: "作品与经历的合集"
             # 子链接
             children:
+                - # 二级导航链接 - 诗集 (自定义)
+                    name: "诗集"
+                    url: "/poetry/"
+                    icon: "mdi:book-open-variant"
+                    description: "收录诗歌作品"
+                - # 二级导航链接 - 小说 (自定义)
+                    name: "小说"
+                    url: "/novels/"
+                    icon: "mdi:book"
+                    description: "短篇与长篇小说合集"
                 - # 二级导航链接 - 项目Projects (预设)
                     "Projects"
                 - # 二级导航链接 - 技能Skills (预设)
