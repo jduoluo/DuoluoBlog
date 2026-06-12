@@ -190,17 +190,17 @@ navbar:
             children:
                 - # 二级导航链接 - 诗集 (自定义)
                     name: "诗集"
-                    url: "/poetry/"
+                    url: "/posts/poetry/"
                     icon: "mdi:book-open-variant"
                     description: "收录诗歌作品"
                 - # 二级导航链接 - 小说 (自定义)
                     name: "小说"
-                    url: "/novels/"
+                    url: "/posts/novels/"
                     icon: "mdi:book"
                     description: "短篇与长篇小说合集"
                 - # 二级导航链接 - 随笔（自定义）
                     name: "随笔"
-                    url: "/essays/"
+                    url: "/posts/essays/"
                     icon: "mdi:notebook"
                     description: "随想与感悟"
                 #- # 二级导航链接 - 项目Projects (预设)

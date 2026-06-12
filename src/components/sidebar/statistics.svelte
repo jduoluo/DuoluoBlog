@@ -20,6 +20,8 @@
         class: className = "",
         style = "",
         side = "default",
+        // startYear is passed from `statistics.astro` (from sidebarConfig)
+        startYear: startYearProp = undefined,
     }: {
         posts?: any[],
         categories?: any[],
@@ -27,6 +29,7 @@
         class?: string,
         style?: string,
         side?: string,
+        startYear?: number | undefined,
     } = $props();
 
     const labels = {
@@ -160,9 +163,13 @@
                 ? Math.min(...posts.map(p => dayjs(p.data.published).year()))
                 : now.year();
             const currentYear = now.year();
-            const startYear = Math.min(oldestYear, currentYear - 4);
+            const candidateStart = Math.min(oldestYear, currentYear - 4);
+            // Use configured startYear if provided; otherwise ensure not earlier than 2026
+            const effectiveStartYear = (typeof startYearProp === 'number' && !isNaN(startYearProp))
+                ? startYearProp
+                : Math.max(candidateStart, 2026);
 
-            for (let year = startYear; year <= currentYear; year++) {
+            for (let year = effectiveStartYear; year <= currentYear; year++) {
                 const yearStr = year.toString();
                 xAxisData.push(yearStr);
                 const count = posts.filter(p => dayjs(p.data.published).year() === year).length;

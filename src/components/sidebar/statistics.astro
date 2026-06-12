@@ -1,5 +1,6 @@
 ---
 import { getCategoryList, getSortedPostsList, getTagList } from "@utils/post";
+import { sidebarConfig } from "@/config";
 import StatsCharts from "./statistics.svelte";
 
 
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const { class: className, style, side } = Astro.props;
+const startYear = sidebarConfig?.statistics?.startYear;
 ---
 
-<StatsCharts client:visible {posts} {categories} {tags} class={className} style={style} {side} />
+<StatsCharts client:visible {posts} {categories} {tags} class={className} style={style} {side} startYear={startYear} />

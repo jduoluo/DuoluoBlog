@@ -22,3 +22,14 @@ export function formatDateI18n(dateString: string): string {
     const locale = langToLocaleMap[lang] || "en-US";
     return date.toLocaleDateString(locale, options);
 }
+
+// Format date to `YYYY-MM-DD HH:mm` in local time
+export function formatDateTime(date: Date): string {
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const year = date.getFullYear();
+    const month = pad(date.getMonth() + 1);
+    const day = pad(date.getDate());
+    const hours = pad(date.getHours());
+    const minutes = pad(date.getMinutes());
+    return `${year}-${month}-${day} ${hours}:${minutes}`;
+}

@@ -30,6 +30,8 @@ const postsCollection = defineCollection({
     schema: z.object({
         title: z.string(),
         published: dateSchema,
+        // 写作日期（可选，用于显示写作时间）
+        written: optionalDateSchema,
         updated: optionalDateSchema,
         description: z.string().optional().default(""),
         cover: z.string().optional().default(""),
