@@ -192,7 +192,7 @@ navbar:
                     name: "诗集"
                     url: "/posts/poetry/"
                     icon: "mdi:book-open-variant"
-                    description: "收录诗歌作品"
+                    description: "不过是些不能成为诗的短文"
                 - # 二级导航链接 - 小说 (自定义)
                     name: "小说"
                     url: "/posts/novels/"
