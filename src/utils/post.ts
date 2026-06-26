@@ -18,10 +18,26 @@ async function getRawSortedPosts() {
         if (a.data.pinned && !b.data.pinned) return -1;
         if (!a.data.pinned && b.data.pinned) return 1;
 
-        // 如果置顶状态相同，则按发布日期排序
+        // 如果置顶状态相同，则按 published 倒序排序
         const dateA = new Date(a.data.published);
         const dateB = new Date(b.data.published);
-        return dateA > dateB ? -1 : 1;
+        if (dateA > dateB) return -1;
+        if (dateA < dateB) return 1;
+
+        // published 相同，使用 written 作为二级排序（倒序），写作时间更近的在前
+        const wA = a.data.written ? new Date(a.data.written) : null;
+        const wB = b.data.written ? new Date(b.data.written) : null;
+        if (wA && wB) {
+            if (wA > wB) return -1;
+            if (wA < wB) return 1;
+        } else if (wA) {
+            return -1;
+        } else if (wB) {
+            return 1;
+        }
+
+        // 作为稳定的兜底顺序，按 id 进行比较
+        return a.id.localeCompare(b.id);
     });
     return sorted;
 }

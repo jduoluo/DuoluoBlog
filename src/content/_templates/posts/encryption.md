@@ -33,6 +33,6 @@ password: "your-password"
 
 ## Note
 
-:::warning
-Do not use this for extremely sensitive information like bank passwords or private keys. The encryption happens on the client side, and the password itself is stored in the post's metadata (though usually not displayed directly).
+:::warning  
+Do not use this for extremely sensitive information like bank passwords or private keys. The encryption happens on the client side, and the password itself is stored in the post's metadata (though usually not displayed directly).  
 :::
