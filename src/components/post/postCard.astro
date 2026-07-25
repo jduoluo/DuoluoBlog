@@ -60,7 +60,7 @@ const imageBaseDir = getFileDirFromPath(entry.filePath || "");
         <!-- metadata -->
         <PostMetadata published={published} updated={updated} tags={tags} category={category || undefined} hideTagsForMobile={true} hideUpdateDate={true} postUrl={url} className="mb-4"></PostMetadata>
         <!-- description -->
-        <div class:list={["transition text-75 mb-3.5 pr-4", {"line-clamp-2 md:line-clamp-1": !description}]}>
+        <div class:list={["transition text-75 mb-3.5 pr-4 whitespace-pre-line", {"line-clamp-2 md:line-clamp-1": !description}]}>
             { description || remarkPluginFrontmatter.excerpt }
         </div>
         <!-- word count and read time  -->

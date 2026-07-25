@@ -1,5 +1,6 @@
 ---
 title: "鸣潮x边缘行者联动观后感"
+routeName: "wuthering-waves-edge-runner-review"
 written: "2026-06-14"
 published: 2026-06-27
 category: ["随笔"]
