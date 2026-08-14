@@ -4,7 +4,7 @@ routeName: "re0-watchtower-amnesia-arc-review"
 written: "2026-07-27"
 published: 2026-07-27
 category: ["随笔"]
-tags: ["Re0", "失忆", "自爱", "自责"]
+tags: ["Re0", "爱", "自我", "死"]
 lang: "zh"
 ---
 

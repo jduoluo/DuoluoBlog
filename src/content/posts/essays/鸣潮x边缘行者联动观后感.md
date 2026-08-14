@@ -4,7 +4,7 @@ routeName: "wuthering-waves-edge-runner-review"
 written: "2026-06-14"
 published: 2026-06-27
 category: ["随笔"]
-tags: ["鸣潮", "梦", "虚实", "告别", "治愈"]
+tags: ["鸣潮", "梦", "幻想", "孤独"]
 ---
 
 剧情简单概括的话是露西的幻梦一场——边缘幻梦，标题非常契合呢。

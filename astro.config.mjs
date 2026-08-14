@@ -31,6 +31,7 @@ import { rehypeMermaid } from "./src/plugins/rehype-mermaid.mjs";
 import { rehypeLazyLoadMedia } from "./src/plugins/rehype-lazy-load-media.mjs";
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
+import { remarkHardBreaks } from "./src/plugins/remark-hard-breaks.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
@@ -152,6 +153,7 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [
             remarkMath,
+            remarkHardBreaks,
             remarkReadingTime,
             remarkExcerpt,
             remarkDirective,

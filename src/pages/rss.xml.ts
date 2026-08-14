@@ -13,7 +13,7 @@ import { parseTags } from "@utils/tag";
 import { getFileDirFromPath, getPostUrl } from "@utils/url";
 
 
-const markdownParser = new MarkdownIt();
+const markdownParser = new MarkdownIt({ breaks: true });
 
 // get dynamic import of images as a map collection
 const imagesGlob = import.meta.glob<{ default: ImageMetadata }>(
